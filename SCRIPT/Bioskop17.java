@@ -1,4 +1,5 @@
 package SCRIPT;
+import java.lang.*;
 
 /**
  * Bioskop17
@@ -23,9 +24,12 @@ public class Bioskop17 {
         System.out.printf("%s \t %s\n", penonton[3][0], penonton[3][1]);
 
         System.out.println(penonton.length);
-        System.out.println(penonton[0].length);
-        System.out.println(penonton[1].length);
-        System.out.println(penonton[2].length);
-        System.out.println(penonton[3].length);
+        for (String[] barisPenonton : penonton) {
+            System.out.println("Panjang Baris : " + barisPenonton.length);
+        }
+
+        for (int i = 0; i < penonton.length; i++) {
+            System.out.println("Penonton baris ke-"+(i+1)+ " : " + String.join(", ",penonton[i]) );
+        }
     }
 }
