@@ -22,15 +22,15 @@ public class BioskopWithScanner17 {
                     System.out.print("Masukan Kolom : ");
                     kolom = input.nextInt();
                     input.nextLine();
+                    if (baris > 4 || kolom > 2) {
+                        System.out.println("Kursi Tidak Tersedia!");
+                        continue;
+                    }
                     if (penonton[baris - 1][kolom - 1] != null) {
                         System.out.println("Kursi Sudah Terisi!");
                         afterMenu = true;
                         continue;
                     }
-                    if (baris > 4 || kolom > 2) {
-                        System.out.println("Kursi Tidak Tersedia!");
-                        afterMenu = true;
-                    } else {
                         penonton[baris - 1][kolom - 1] = nama;
 
                         System.out.print("Input penonton lainnya? (y/n) : ");
@@ -39,7 +39,6 @@ public class BioskopWithScanner17 {
                         if (next.equalsIgnoreCase("n")) {
                             break;
                         }
-                    }
                 }
             } else if (pemilihanMenu.equals("2")) {
                 for (int i = 0; i < penonton.length; i++) {
