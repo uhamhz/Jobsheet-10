@@ -1,5 +1,6 @@
 package SCRIPT;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class BioskopWithScanner17 {
@@ -51,6 +52,7 @@ public class BioskopWithScanner17 {
 
                 for (int i = 0; i <= 3;i++) {
                     System.out.println("Penonton baris ke-" + (i + 1) + " : " + String.join(", ", penonton[i]));
+                    // System.out.println(Arrays.toString(penonton[i]));
                 }
             } else if (pemilihanMenu.equals("3")) {
                 return;

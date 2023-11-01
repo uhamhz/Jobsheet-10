@@ -1,5 +1,4 @@
 package SCRIPT;
-import java.lang.*;
 
 /**
  * Bioskop17
